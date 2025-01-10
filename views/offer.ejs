@@ -80,6 +80,14 @@
     
 
     <script>
+        const btn = document.getElementById('btn');
+      const mbl_menu  = document.getElementById('mbl-menu')
+
+      btn.addEventListener('click',()=>{
+          mbl_menu.classList.toggle('open');
+      })
+  </script>
+    <script>
 // Get the start time passed from the server (in seconds)
 const startTime = <%= consistentTime %>; // This will be set by the server when rendering the pagen
 // Set the initial countdown time (7 days in seconds)

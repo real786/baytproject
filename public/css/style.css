@@ -304,11 +304,29 @@ textarea {
     .mbl-links.open{
         display: flex;
     }
+    .offer-banner{
+        height: 100vh;
+    }
+    .offer-text{
+        font-size: 23px;
+    }
 
+    .footer-email input{
+        width: 100%;
+    }
+    .footer-block h2{
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 400px) {
     #products{
         grid-template-columns: 1fr;
+    }
+    .offer-text{
+        font-size: 16px;
+    }
+    .footer-block h2{
+        font-size: 16px;
     }
 }
