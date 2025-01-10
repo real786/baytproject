@@ -19,15 +19,16 @@ header nav{
     justify-content: space-between;
     align-items: center;
     padding: 13px 0;
+    position: relative;
 }
-header nav div:nth-child(2){
+header nav .lg-links{
     display: flex;
     gap: 13px;
 }
-header nav div:nth-child(2) a{
+header nav .lg-links a{
     color: black;
 }
-header nav div:nth-child(3){
+header nav .social-links{
     display: flex;
     gap: 13px;
 }
@@ -52,6 +53,7 @@ header nav div:nth-child(3){
     height: 450px;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 .banner-text{
     padding: 8px 33px;
@@ -241,8 +243,13 @@ textarea {
     background-color: #218838;
 }
 
+
+
+.mbl-links , #btn{
+    display: none;
+}
 /* Responsive styling */
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .contact-container {
         padding: 20px;
     }
@@ -254,5 +261,54 @@ textarea {
     .submit-btn {
         padding: 12px 24px;
         font-size: 1em;
+    }
+    .footer-email {
+        flex-direction: column;
+    }
+
+    #products{
+        grid-template-columns: 1fr 1fr;
+    }
+    header nav{
+        padding: 13px 8px;
+    }
+    header nav .lg-links{
+        display: none;
+    }
+   header nav .social-links{
+        display: none;
+    }
+    #btn{
+        display: block;
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 8px;
+    }
+    .mbl-links{
+        display: none;
+        flex-direction: column;
+        gap: 8px;
+        position: absolute;
+        top: 77px;
+        width: 90%;
+        padding: 13px 8px;
+        background-color: white;
+        z-index: 2;
+        text-align: right;
+    }
+    .mbl-links a{
+        color: black;
+        
+    }
+    .mbl-links.open{
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    #products{
+        grid-template-columns: 1fr;
     }
 }
