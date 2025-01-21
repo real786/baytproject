@@ -213,9 +213,91 @@ footer form button{
 .mbl-links , #mbl-btn{
     display: none;
 }
+
+/* COntact pages styels */
+
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+.contact-container p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Label styling */
+label {
+    font-weight: 500;
+    font-size: 1em;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Input and textarea styling */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    height: 150px;
+}
+
+/* Button styling */
+.submit-btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+
 /* Responsive styling */
 @media screen and (max-width: 600px) {
-    
+    .contact-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .submit-btn {
+        padding: 12px 24px;
+        font-size: 1em;
+    }
     header nav{
         padding: 13px 8px;
     }
