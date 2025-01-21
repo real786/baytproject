@@ -68,8 +68,16 @@ app.get('/success',(_,res)=>{
 app.get('/contact' , ( _ , res ) => {
     res.render('contact')
 })
+app.get('/blog1', ( _ , res ) => {
+    res.render('blog-maint');
+})
 
-
+app.get('/blog2', ( _ , res ) => {
+    res.render('blog2');
+})
+app.get('/blog3', ( _ , res ) => {
+    res.render('blog3');
+})
 // Route to create a checkout session
 app.post('/create-checkout-session', express.json(), async (req, res) => {
     const { priceId } = req.body; // Expect priceId from the client

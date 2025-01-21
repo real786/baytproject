@@ -11,32 +11,32 @@
     <title>ALL PRODUCTS | BaytClothing</title>
 </head>
 <body>
-    <header class="container">
+    <header>
         <nav>
+            <ul class="lg-links">
+                <li><a href="/products">shop</a></li>
+                <li><a href="/">home</a></li>
+                <li><a href="/offer">offer</a></li>
+                <li><a href="/about">about</a></li>
+            </ul>
             <div>
-                <img width="50px" height="50px" src="assets/logo.jpg" alt="company logo">
+                <img src="assets/logo.jpg" height="35px" width="35px" alt="shop logo">
             </div>
-            <div class="lg-links">
-                <a href="/">Home</a>
-                <a href="/products">Products</a>
-                <a href="/offer">Offers</a>
-                <a href="/about">About Us</a>
-                <a href="/blogs">BLogs</a>
-            </div>
-            <div class="social-links">
-                <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
-            </div>
-            <button id="btn"><i class="fa-solid fa-bars"></i></button>
-            <div id="mbl-menu" class="mbl-links">
-                <a href="/">Home</a>
-                <a href="/products">Products</a>
-                <a href="/offer">Offers</a>
-                <a href="/about">About Us</a>
-                <a href="/contact">Contact Us</a>
-            </div>
+             
+            <ul class="lg-links">
+                <li><img src="assets/usd.png" height="30px" width="30px" alt="usa flag"></li>
+                <li><a href="/contact"></a>contact</li>
+                
+            </ul>
+            <button id="mbl-btn"><i class="fa-solid fa-bars"></i></button>
+        
+            <ul id="menu" class="mbl-links">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/products">SHOP</a></li>
+                <li><a href="/offer">LATEST OFFER</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li> <a href="/contact">CONTACT</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -51,10 +51,9 @@
     </section>
 
 
-    <section class="container featured-products">
-        <h2>Our Top Products</h2>
-   
-        <div id="products">
+    <section style="margin-top: 34px;">
+        <h2 style="text-align: center;">Our Top Products</h2>
+        <div class="product-grid" style="padding: 43px 8px;">
             <% products.forEach(product => { %>
                 <div class="product">
                     <% if (product.images.length > 0) { %>
@@ -75,34 +74,45 @@
     </section>
 
     <footer>
-        <div class="container footer-block">
-            <h2>SIGN UP FOR EXCLUSIVE UPDATES AND FOLLOW US ON SOCIAL MEDIA!</h2>
-            <div class="footer-email">
-                <form action="/subscribe" method="post">
-                    <input type="email" name="email" required placeholder="Email">
-                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
-                </form>
-                <div class="social-links">
-                    <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
-                </div>
-            </div>
-            <div style="margin-top: 13px; text-align: center;">
-                <hr>
-            <p style="margin-top: 13px;">&copy; All Rights Reserved By BaytClothing</p>
+        <div class="form-sec">
+            <h3>Bayt Clothing</h3>
+            <p>STAY UPDATED WITH OUR LATEST COLLECTIONS, NEW PRODUCTS, & EXCLUSIVE OFFERS.</p>
+            <form action="/subcribe">
+                <input type="email" required placeholder="Enter Email">
+                <button>SUBMIT</button>
+            </form>
+        </div>
+        <div class="footer-grid">
+            <ul>
+                <li>BaytClothing</li>
+                <li><a href="/contact">Message Us</a></li>
+                <li><a href="/contact">Email</a></li>
+            </ul>
+            <ul>
+                <li>navigation links</li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/products">SHOP</a></li>
+                <li><a href="/offer">LATEST OFFER</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li> <a href="/contact">CONTACT</a></li>
+            </ul>
+            <ul>
+                <li>social links</li>
+                <li><a href="https://instagram.com/">instagram</a></li>
+                <li><a href="https://tiktok.com/">tiktok</a></li>
+                <li><a href="https://facebook.com/">facebook</a></li>
+            </ul>
+            <div>
+                <img height="33px" width="33px" src="assets/usd.png" alt="usa country flag">
             </div>
         </div>
-       
+        <div class="copyright">
+            &copy; BAYT CLOTHING CO 
+            <div>
+                <img height="53px" width="53px" src="assets/logo.jpg" alt="store logo">
+            </div>
+        </div>
     </footer>
-    <script>
-        const btn = document.getElementById('btn');
-      const mbl_menu  = document.getElementById('mbl-menu')
-
-      btn.addEventListener('click',()=>{
-          mbl_menu.classList.toggle('open');
-      })
-  </script>
+    <script src="js/script.js"></script>
 </body>
 </html>

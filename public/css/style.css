@@ -8,9 +8,8 @@
     list-style: none;
 }
 
-.container{
-    max-width: 1150px;
-    margin: 13px  auto;
+
+header{
     position: relative;
 }
 
@@ -19,54 +18,51 @@ header nav{
     justify-content: space-between;
     align-items: center;
     padding: 13px 0;
-    position: relative;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: white;
 }
-header nav .lg-links{
-    display: flex;
-    gap: 13px;
-}
-header nav .lg-links a{
+header nav a{
     color: black;
 }
-header nav .social-links{
-    display: flex;
-    gap: 13px;
-}
-.social-links a{
-    color: white;
-    background-color: black;
-    height: 35px;
-    width: 35px;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
 
+header nav ul{
+    display: flex;
+    gap:14px;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: small;
+}
+header nav ul li{
+    padding: 13px 8px;
+}
 
 .banner{
-    background-image:url('../assets/banner.png');
+    background-image:url('../assets/banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
-    height: 450px;
+    height: 100vh;
     display: flex;
     align-items: center;
+    justify-content:center;
     width: 100%;
+    position: relative;
 }
 .banner-text{
     padding: 8px 33px;
-    width: 750px;
     color: white;
     position: relative;
+    text-align: center;
     z-index: 1;
-    font-size: 33px;
 }
-.banner-text p{
-    color: slategray;
-    font-size: 20px;
+.banner-text a{
+    color: white;
+    text-decoration: underline;
 }
+
 
 .shadow{
     position: absolute;
@@ -75,227 +71,184 @@ header nav .social-links{
     height: 100%;
 }
 
-.featured-products{
-    margin-top: 33px;
-}
-.featured-products > h2{
-    text-align: center  ;
-}
-#products{
+
+.product-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 33px ;
     gap: 15px;
+    padding: 13px 8px;
 }
+
 .product img{
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
     border-radius: 8px;
 }
-#products button{
-    background-color: rgba(37, 37, 247, 0.813);
-    color: white;
-    border: none;
+.product h2,p{
+    font-size: small;
+    font-weight: 300;
+}
+.product button{
+    color: black;
+    background-color: transparent;
+    border: solid 1px black;
     outline: none;
     padding: 8px 13px;
-    font-weight: 700;
-    border-radius: 8px;
+    cursor: pointer;
+    margin: 13px 0;
+    transition: ease-in .5s;
+}
+.product button:hover{
+    background-color: black;
+    color: white;
+
+}
+
+.blog-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 13px 8px;
+    gap: 8px;
+}
+.blog img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;   
+    border-radius: 8px; 
+}
+.blog p{
+    margin-top: 8px;
+    font-size: small;
+}
+.blog a{
+    border: solid 1px black;
+    padding: 8px 13px;
+    color: black;
+    font-size: small;
+    margin-top: 13px;
+    display: block;
+    text-align: center;
+}
+
+
+footer .form-sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    background-color: black;
+    padding: 33px 8px;
+    color: white;
+    text-align: center;
+}
+
+footer form{
+    display: flex;
+}
+footer form input{
+    border: solid 1px white;
+    width: 100%;
+    padding: 13px 33px;
+    background-color: transparent;
+    color: slategray;
+    outline: none;
+}
+
+footer form button{
+    padding: 0 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.footer-grid{
+    max-width: 1050px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: auto;
+    padding: 33px 0;
+}
+.footer-grid ul li{
+    color: black;
+    text-transform: uppercase;
+    font-size: small;
+}
+.footer-grid ul li a{
+    color: black;
+}
+.footer-grid ul li:nth-child(1){
     margin: 13px 0;
 }
-
-
-
-footer {
-    background-color: black;
-    color: white;
+.footer-grid ul li{
+    padding: 3px 0;
+}
+.copyright{
+    text-align: center;
 }
 
-.footer-block{
-    padding: 53px 0;
-}
-.footer-email{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 23px;
-}
-.footer-email .social-links{
-    display: flex;
-    gap: 14px;
-    
 
-}
-.footer-email .social-links a{
-    background-color: black;
-    color: white;
-}
-.footer-email form{
-    position: relative;
-}
-.footer-email input{
 
-    background-color: transparent;
-    border:1px solid white;
-    padding: 18px 8px;
-    width: 450px;
-    font-size: 20px;
-}
-.footer-email form  button{
-    position: absolute;
-    right: 9px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    background-color: transparent;
-    border: none;
-    color:white;
-}
 
 .offer-banner{
     background-image: url('../assets/offer-banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 90vh;
-    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
+
 .offer-text{
-    font-size: 35px;
-    position:relative;
-    z-index: 1;
     text-align: center;
-    font-family: 'Montserrat';
     font-style: italic;
-    font-weight: bolder;
+    position: relative;
+    z-index: 77;
+    font-size: xx-large;
 }
-
-
-
-/* COntact pages styels */
-
-.contact-container {
-    max-width: 600px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Heading styling */
-h1 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* Paragraph styling */
-.contact-container p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-/* Form group styling */
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-/* Label styling */
-label {
-    font-weight: 500;
-    font-size: 1em;
-    display: block;
-    margin-bottom: 8px;
-}
-
-/* Input and textarea styling */
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-textarea {
-    height: 150px;
-}
-
-/* Button styling */
-.submit-btn {
-    background-color: #28a745;
-    color: #fff;
-    padding: 15px 30px;
-    font-size: 1.1em;
-    border-radius: 5px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.submit-btn:hover {
-    background-color: #218838;
-}
-
-
-
-.mbl-links , #btn{
+.mbl-links , #mbl-btn{
     display: none;
 }
 /* Responsive styling */
 @media screen and (max-width: 600px) {
-    .contact-container {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    .submit-btn {
-        padding: 12px 24px;
-        font-size: 1em;
-    }
-    .footer-email {
-        flex-direction: column;
-    }
-
-    #products{
-        grid-template-columns: 1fr 1fr;
-    }
+    
     header nav{
         padding: 13px 8px;
     }
-    header nav .lg-links{
+
+    .product-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .blog-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .lg-links{
         display: none;
     }
-   header nav .social-links{
-        display: none;
-    }
-    #btn{
+    #mbl-btn{
         display: block;
-        background-color: black;
-        color: white;
-        border: none;
-        padding: 8px;
+        border: solid 1px black;
+        padding:  8px;
+        font-size: x-large;
+        background-color: transparent;
     }
     .mbl-links{
         display: none;
         flex-direction: column;
         gap: 8px;
         position: absolute;
-        top: 77px;
+        top: 70px;
+        right: 8px;
         width: 90%;
         padding: 13px 8px;
         background-color: white;
-        z-index: 2;
-        text-align: right;
+        z-index: 88;
+        text-align: left;
+
     }
     .mbl-links a{
         color: black;
@@ -311,22 +264,35 @@ textarea {
         font-size: 23px;
     }
 
-    .footer-email input{
+    .footer-grid{
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        place-content: center;
+        gap:8px
+    }
+    form{
         width: 100%;
     }
-    .footer-block h2{
-        font-size: 20px;
+    .form-sec form{
+        flex-direction: column;
+    }
+    .form-sec button{
+        padding: 13px 0;
+        margin-top: 3px;
     }
 }
 
 @media screen and (max-width: 400px) {
-    #products{
+    .product-grid{
+        grid-template-columns: 1fr;
+    }
+    .blog-grid{
         grid-template-columns: 1fr;
     }
     .offer-text{
         font-size: 16px;
     }
-    .footer-block h2{
-        font-size: 16px;
+    .footer-grid{
+        grid-template-columns: 1fr;
     }
 }
